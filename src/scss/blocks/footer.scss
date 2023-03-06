@@ -1,1 +1,11 @@
 /* ESTILOS DEL FOOTER */
+@use '../mixins/responsive.scss' as *;
+
+.footer {
+  padding: 2rem;
+
+  @include responsive(tablet) {
+    grid-area: footer;
+  }
+}
+

@@ -1,4 +1,10 @@
-html {
-}
+@use '../mixins/responsive.scss' as *;
+
 body {
+  background-color: var(--bgcolor);
+  font-family: sans-serif;
+  color: var(--white);
+  font-family: var(--vietnam-Font);
+  min-width: 320px;
 }
+

@@ -1,1 +1,30 @@
 /* ESTILOS DEL MAIN */
+@use '../mixins/responsive.scss' as *;
+
+.main {
+  display: grid;
+  height: 100vh;
+  min-height: 100vh;
+
+  @include responsive(laptop) {
+    grid-template-columns: 15% 60%;
+    grid-template-areas:
+      'header main-content'
+      'header main-content'
+      'header footer';
+  }
+
+  @include responsive(desktop) {
+    grid-template-columns: 15% 60% 25%;
+    grid-template-areas: 'header main-content footer';
+  }
+}
+
+.main > *:not(:last-child) {
+  border-right: 1px solid var(--borderlines);
+}
+
+.main > *:last-child {
+  border-right: none;
+}
+
