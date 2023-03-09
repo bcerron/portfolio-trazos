@@ -1,0 +1,86 @@
+@use '../mixins/responsive.scss' as *;
+
+//DIV Home - Estilos
+
+.home__img {
+  grid-column: 1/2;
+  grid-row: 1/1;
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  @include responsive(tablet) {
+    grid-row: 1/3;
+  }
+  @include responsive(tablet) {
+    grid-row: 1/4;
+  }
+  @include responsive(desktop) {
+    grid-row: 1/5;
+  }
+}
+.home__header {
+  flex-direction: row;
+}
+.home__rrss {
+  grid-column: 1/3;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  @include responsive(tablet) {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  @include responsive(laptop) {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    justify-content: start;
+    column-gap: 30px;
+  }
+  @include responsive(desktop) {
+    justify-content: start;
+    column-gap: 30px;
+  }
+}
+
+.profile-image {
+  border-radius: 100%;
+  height: 120px;
+  width: 120px;
+
+  @include responsive(tablet) {
+    height: 100%;
+    width: 85%;
+    border-radius: 20px;
+  }
+}
+
+.home__info {
+  width: auto;
+  height: auto;
+  grid-column: 2/3;
+  grid-row: 1/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  @include responsive(tablet) {
+    grid-row: 1/2;
+    margin-top: 40px;
+  }
+  @include responsive(laptop) {
+    grid-row: 1/2;
+    margin-top: 40px;
+  }
+  @include responsive(desktop) {
+    grid-row: 1/2;
+    margin-top: 40px;
+  }
+}
+.home__description {
+  line-height: 1.5;
+  text-align: justify;
+  flex-direction: column;
+}
+

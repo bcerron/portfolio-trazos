@@ -1,6 +1,32 @@
 @use '../mixins/responsive.scss' as *;
 
 .header {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: var(--menuHeight);
+  border-top: 1px solid var(--borderlines);
+  background-color: var(--bgmenu);
+  color: var(--white);
+  text-align: center;
+  justify-self: center;
+
+  @include responsive(tablet) {
+    height: 80px;
+  }
+
+  @include responsive(laptop) {
+    display: flex;
+    border-top: 0px;
+    position: relative;
+    bottom: auto;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* .header {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -12,13 +38,14 @@
   justify-self: center;
 
   @include responsive(tablet) {
+    width: var(--menuWidth);
     display: flex;
     border-top: 0px;
-    position: relative;
+    position: absolute;
     bottom: auto;
     height: 100vh;
     align-items: center;
     justify-content: center;
   }
-}
+} */
 

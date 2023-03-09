@@ -11,6 +11,7 @@ const screenSize = {
 
 // Obtén todos los elementos de la lista
 const menuElements = document.querySelectorAll('.menu__element');
+const blueBackgroundElement = document.querySelectorAll('.content');
 
 // Función para verificar el ancho de la pantalla
 function checkWidth() {
@@ -19,10 +20,16 @@ function checkWidth() {
     menuElements.forEach(element => {
       element.querySelector('.element--span').classList.add('hide-span');
     });
+    blueBackgroundElement.forEach(element => {
+      element.classList.remove('bg-main-color');
+    });
   } else {
     // Si el ancho es mayor o igual a 700px, elimina la clase CSS "hide-span" de todos los elementos span
     menuElements.forEach(element => {
       element.querySelector('.element--span').classList.remove('hide-span');
+    });
+    blueBackgroundElement.forEach(element => {
+      element.classList.add('bg-main-color');
     });
   }
 }
@@ -46,5 +53,16 @@ menuElements.forEach(element => {
     // Agrega la clase 'active-element' al elemento <li> clickeado
     element.classList.add('active-element');
   });
+});
+
+const menuElement = document.getElementById('menu');
+const sections = document.querySelectorAll('.content');
+
+menuElement.addEventListener('click', e => {
+  console.log(e.target);
+  if (!e.target.classList.contains('menu__element')) return;
+
+  sections.forEach(sections => sections.classList.add('hide'));
+  document.getElementById(e.target.dataset.menu).classList.remove('hide');
 });
 

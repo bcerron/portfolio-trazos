@@ -1,14 +1,27 @@
+@use '../mixins/responsive.scss' as *;
+
 p {
   margin-block-start: 0;
 }
 
 .title {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 800;
+  @include responsive(tablet) {
+    font-size: 2rem;
+  }
 }
 
 .subtitle {
-  font-weight: 100;
+  font-weight: 200;
   font-size: 1.125rem;
+  @include responsive(tablet) {
+    font-size: 1.5rem;
+  }
+}
+
+.text {
+  font-weight: 100;
+  font-size: 1rem;
 }
 

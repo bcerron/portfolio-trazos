@@ -1,0 +1,40 @@
+@use '../mixins/responsive.scss' as *;
+
+//DIV Home - Estilos
+.content-work {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  gap: 10px;
+  padding: 1.25rem;
+  border-radius: 1.25rem;
+  min-height: 40px;
+
+  overflow-y: scroll;
+
+  @include responsive(tablet) {
+    row-gap: 10px;
+  }
+}
+
+.content-work__jobs {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+
+  @include responsive(tablet) {
+    grid-row: 1/2;
+  }
+  @include responsive(laptop) {
+    grid-row: 1/2;
+  }
+  @include responsive(desktop) {
+    grid-row: 1/2;
+  }
+}
+.content-home__description {
+  line-height: 1.5;
+  text-align: left;
+  grid-column: 1/3;
+}
+

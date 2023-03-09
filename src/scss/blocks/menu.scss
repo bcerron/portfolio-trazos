@@ -7,10 +7,82 @@
   height: var(--menuHeight);
   padding: 10px;
 
-  @include responsive(tablet) {
+  @include responsive(laptop) {
     grid-template-columns: repeat(1, 1fr);
-    height: auto;
+    height: var(--menuHeight + 40px);
     gap: 3rem;
+  }
+
+  &__element {
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    height: auto;
+    padding: 10px;
+    align-items: center;
+    justify-self: center;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.5s;
+    @include responsive(tablet) {
+      width: 100px;
+      padding: 5px;
+      gap: 0.3125rem;
+    }
+  }
+}
+
+.element--span,
+.element--img {
+  pointer-events: none;
+}
+
+.element--home img,
+.element--works img,
+.element--about img,
+.element--contact img {
+  width: 30px;
+  height: 30px;
+}
+
+.active-element {
+  background-color: var(--active-bgcolor);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+.hide-span {
+  display: none;
+}
+
+/* .menu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2.5rem;
+  height: var(--menuHeight);
+  padding: 10px;
+
+  @include responsive(tablet) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: var(--menuWidth);
+    background-color: var(--bgmenu);
+    height: 100vh;
+    grid-area: menu;
+  }
+  @include responsive(laptop) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: var(--menuWidth);
+    background-color: var(--bgmenu);
+    height: 100vh;
+    top: 0;
+    left: 0;
   }
 
   &__element {
@@ -50,4 +122,6 @@
 .hide-span {
   display: none;
 }
+
+ */
 
