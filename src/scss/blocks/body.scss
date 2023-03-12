@@ -11,13 +11,13 @@ body {
   background-repeat: no-repeat;
   background-position: 0 0;
   overflow: hidden;
-  background-image: url(../../assets/images/bg-tablet.jpg);
+  background-image: url(/src/assets/images/bg-tablet.jpg);
 
   @include responsive(laptop) {
-    background-image: url(../../assets/images/bg-laptop.jpg);
+    background-image: url(/src/assets/images/bg-laptop.jpg);
   }
   @include responsive(desktop) {
-    background-image: url(../../assets/images/bg-desktop.jpg);
+    background-image: url(/src/assets/images/bg-desktop.jpg);
   }
 }
 
