@@ -1,14 +1,54 @@
+@use '../mixins/responsive.scss' as *;
+
 p {
   margin-block-start: 0;
 }
 
 .title {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 800;
+  @include responsive(tablet) {
+    font-size: 2rem;
+  }
 }
 
 .subtitle {
-  font-weight: 100;
+  font-weight: 200;
   font-size: 1.125rem;
+  @include responsive(tablet) {
+    font-size: 1.5rem;
+  }
+}
+
+.text {
+  font-weight: 100;
+  font-size: 1rem;
+}
+
+.company,
+.position,
+.duration {
+  margin: 5px 0;
+}
+
+.company {
+  font-size: 17px;
+}
+
+.position {
+  font-size: 14px;
+}
+.duration {
+  font-family: var(--robotoMono-Font);
+  font-weight: 200;
+  font-size: 12px;
+}
+
+.job__description {
+  font-size: 13px;
+  font-weight: 200;
+  text-align: center;
+  font-family: var(--robotoMono-Font);
+  padding: 10px 10px 0 10px;
 }
 

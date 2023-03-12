@@ -1,31 +1,32 @@
 /* ESTILOS DEL FOOTER */
 @use '../mixins/responsive.scss' as *;
 
-.footer {
-  position: relative;
+.contact {
+  width: 95%;
+
+/*   position: relative;
   padding: var(--globalPadding);
   width: auto;
   bottom: var(--menuHeight);
   //margin-bottom: var(--menuHeight);
   top: 20px;
+  left: 0;
 
   @include responsive(laptop) {
     position: relative;
     width: calc(100% - var(--menuWidth));
     bottom: 0;
-    left: var(--menuWidth);
   }
   @include responsive(desktop) {
-    left: auto;
     position: absolute;
     bottom: 0;
     top: 0;
     right: 0;
     width: var(--footerWidth);
-  }
+  } */
 }
 
-.footer__container {
+.contact__container {
   background-color: var(--mainColor);
   padding: 2rem;
   border-radius: var(--globalRadius);

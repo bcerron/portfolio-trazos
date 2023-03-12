@@ -1,30 +1,57 @@
 /* ESTILOS DEL MAIN */
+/* ESTILOS DEL MAIN */
 @use '../mixins/responsive.scss' as *;
 
 .main {
-  display: grid;
-  height: 100vh;
-  min-height: 100vh;
+  position: relative;
+  width: 100%;
+  margin-bottom: 40px;
+  //max-height: calc(100vh - var(--menuHeight));
 
   @include responsive(laptop) {
-    grid-template-columns: 15% 60%;
-    grid-template-areas:
-      'header main-content'
-      'header main-content'
-      'header footer';
-  }
+    height: calc(100vh - var(--menuHeight));
+    top: 0;
 
+    position: relative;
+    left: var(--menuWidth);
+    width: calc(100% - var(--menuWidth));
+    height: 100vh;
+    max-height: 100vh;
+  }
   @include responsive(desktop) {
-    grid-template-columns: 15% 60% 25%;
-    grid-template-areas: 'header main-content footer';
+    width: calc(95% - var(--menuWidth));
   }
 }
 
 .main > *:not(:last-child) {
-  border-right: 1px solid var(--borderlines);
+  @include responsive(laptop) {
+    border-right: 1px solid var(--borderlines);
+    box-shadow: 0 0 100px -5px var(--glow);
+  }
 }
 
 .main > *:last-child {
   border-right: none;
 }
+
+/* .main {
+  @include responsive(laptop) {
+    display: grid;
+    grid-template-columns: 15% 60% 25%;
+    grid-area: 'menu content footer';
+    grid-gap: 20px;
+    height: 100vh;
+  }
+}
+
+.main > *:not(:last-child) {
+  @include responsive(laptop) {
+    border-right: 1px solid var(--borderlines);
+  }
+}
+
+.main > *:last-child {
+  border-right: none;
+}
+ */
 

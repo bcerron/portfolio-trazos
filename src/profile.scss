@@ -1,0 +1,93 @@
+@use '../mixins/responsive.scss' as *;
+
+//DIV profile - Estilos
+
+.profile {
+  margin-bottom: 20px;
+}
+
+.profile__img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+}
+
+.profile__rrss {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 10px;
+
+  @include responsive(tablet) {
+  }
+  @include responsive(laptop) {
+    column-gap: 30px;
+  }
+  @include responsive(desktop) {
+    justify-content: flex-start;
+    column-gap: 30px;
+  }
+}
+
+.profile--image {
+  border-radius: 100%;
+  height: auto;
+  width: 85%;
+
+  @include responsive(tablet) {
+    width: 85%;
+    border-radius: 20px;
+  }
+}
+
+.profile__info {
+  width: auto;
+  height: auto;
+  grid-column: 2/3;
+  grid-row: 1/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  @include responsive(tablet) {
+    grid-row: 1/2;
+    margin-top: 40px;
+  }
+  @include responsive(laptop) {
+    grid-row: 1/2;
+    margin-top: 40px;
+  }
+  @include responsive(desktop) {
+    grid-row: 1/2;
+    margin-top: 40px;
+  }
+}
+.profile__description {
+  line-height: 1.5;
+  text-align: justify;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.experience {
+  gap: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.experience__element {
+  background-color: var(--active-bgcolor);
+  border-radius: 5px;
+  padding: 15px;
+  width: 100%;
+  @include responsive(laptop) {
+    width: inherit;
+  }
+}
+
+.company {
+  font-size: 15px;
+  font-weight: 800;
+}
+

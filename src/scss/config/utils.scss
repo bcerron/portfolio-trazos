@@ -3,3 +3,31 @@
 .grid {
   display: grid;
 }
+
+.bg-main-color {
+  background-color: var(--mainColor);
+}
+
+.hide {
+  opacity: 0;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transition: opacity var(--defaultTime);
+}
+.hide-footer {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
+}
+
