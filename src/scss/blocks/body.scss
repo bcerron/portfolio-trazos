@@ -6,4 +6,18 @@ body {
   color: var(--white);
   font-family: var(--vietnam-Font);
   min-width: 320px;
+  max-width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  overflow: hidden;
+  background-image: url(../../assets/images/bg-tablet.jpg);
+
+  @include responsive(laptop) {
+    background-image: url(../../assets/images/bg-laptop.jpg);
+  }
+  @include responsive(desktop) {
+    background-image: url(../../assets/images/bg-desktop.jpg);
+  }
 }
+

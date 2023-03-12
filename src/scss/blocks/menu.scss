@@ -23,7 +23,7 @@
     justify-self: center;
     cursor: pointer;
     border-radius: 10px;
-    transition: background-color 0.5s;
+    transition: background-color var(--defaultTime);
     @include responsive(tablet) {
       width: 100px;
       padding: 5px;
@@ -49,7 +49,7 @@
   background-color: var(--active-bgcolor);
   border-radius: 10px;
   cursor: pointer;
-  transition: background-color 0.5s;
+  transition: background-color var(--defaultTime);
 }
 
 .hide-span {
@@ -95,7 +95,7 @@
     justify-self: center;
     cursor: pointer;
     border-radius: 10px;
-    transition: background-color 0.5s;
+    transition: background-color var(--defaultTime);
     @include responsive(tablet) {
       width: 100px;
       padding: 5px;
@@ -116,7 +116,7 @@
   background-color: var(--active-bgcolor);
   border-radius: 10px;
   cursor: pointer;
-  transition: background-color 0.5s;
+  transition: background-color var(--defaultTime);
 }
 
 .hide-span {

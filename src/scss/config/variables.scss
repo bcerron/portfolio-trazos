@@ -1,19 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 :root {
   /* Variables CSS */
   --vietnam-Font: 'Be Vietnam Pro';
+  --robotoMono-Font: 'Roboto Mono';
 
   //Colores
   --white: #fff;
   --bgcolor: #1f2733;
-  --mainColor: #182d4d;
+
   --bgmenu: #191f33;
   --active-bgcolor: #4e6280;
   --borderlines: #7c9ccc;
+  --glow: hsla(216, 44%, 64%, 0.6);
+  --mainColor: rgba(124, 156, 204, 0.3);
 
-  //Altura Menu
+  --elementColor: rgba(0, 0, 0, 0.3);
+
+  //Padding
+  --globalPadding: 1.25rem;
+
+  //Radius
+  --globalRadius: 1.25rem;
+
+  //Tamaño Menu
   --menuHeight: 70px;
-  --menuWidth: 200px;
+  --menuWidth: 10%;
+
+  //Tamaño Footer
+  --footerWidth: 25%;
+
+  //Tamaño Iconos Trabajo
+  --jobsIconsH: 150px;
+  --jobsIconsW: 150px;
+
+  //Transiciones
+  --defaultTime: 0.5s;
 }
 

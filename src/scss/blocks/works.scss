@@ -1,40 +1,46 @@
 @use '../mixins/responsive.scss' as *;
 
 //DIV Home - Estilos
-.content-work {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: space-between;
-  gap: 10px;
-  padding: 1.25rem;
-  border-radius: 1.25rem;
-  min-height: 40px;
-
-  overflow-y: scroll;
-
-  @include responsive(tablet) {
-    row-gap: 10px;
-  }
+.work__header {
+  width: auto;
 }
 
-.content-work__jobs {
-  width: 100px;
-  height: 100px;
-  background-color: red;
+.work {
+  padding: var(--globalPadding);
+  border-radius: var(--globalRadius);
+  //height: auto;
+  
 
-  @include responsive(tablet) {
-    grid-row: 1/2;
-  }
-  @include responsive(laptop) {
-    grid-row: 1/2;
-  }
   @include responsive(desktop) {
-    grid-row: 1/2;
+    width: inherit;
   }
 }
-.content-home__description {
-  line-height: 1.5;
-  text-align: left;
-  grid-column: 1/3;
+
+.work__jobs {
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+  justify-content: space-around;
+
+  @include responsive(laptop){
+    justify-content: flex-start;
+  }
+}
+
+.work__element {
+  flex-shrink: 0;
+  background-color: var(--elementColor);
+  border-radius: var(--globalRadius);
+  margin: 5px;
+}
+
+.work__element:hover {
+  box-shadow: 0px 0px 10px var(--glow);
+}
+
+.job__image {
+  width: var(--jobsIconsH);
+  height: auto;
+  border-radius: var(--globalRadius);
 }
 

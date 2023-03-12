@@ -2,10 +2,13 @@
 
 .header {
   position: fixed;
+  z-index: 1;
   bottom: 0;
+  left: 0;
   width: 100%;
   height: var(--menuHeight);
   border-top: 1px solid var(--borderlines);
+  box-shadow: 0 0 100px -5px var(--glow);
   background-color: var(--bgmenu);
   color: var(--white);
   text-align: center;
@@ -13,39 +16,18 @@
 
   @include responsive(tablet) {
     height: 80px;
+    box-shadow: none;
   }
 
   @include responsive(laptop) {
+    width: var(--menuWidth);
     display: flex;
     border-top: 0px;
-    position: relative;
+
     bottom: auto;
     height: 100vh;
     align-items: center;
     justify-content: center;
   }
 }
-
-/* .header {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: var(--menuHeight);
-  border-top: 1px solid var(--borderlines);
-  background-color: var(--bgmenu);
-  color: var(--white);
-  text-align: center;
-  justify-self: center;
-
-  @include responsive(tablet) {
-    width: var(--menuWidth);
-    display: flex;
-    border-top: 0px;
-    position: absolute;
-    bottom: auto;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-  }
-} */
 

@@ -3,25 +3,31 @@
 @use '../mixins/responsive.scss' as *;
 
 .main {
-  display: grid;
-  height: 100vh;
-  max-height: 100vh;
-  background-size: cover;
-  background-position: 0 0;
-  background-image: url(../../assets/images/bg-tablet.png);
+  position: relative;
+  width: 100%;
+  margin-bottom: 40px;
+  //max-height: calc(100vh - var(--menuHeight));
 
   @include responsive(laptop) {
-    grid-template-columns: 15% 85%;
-    background-image: url(../../assets/images/bg-laptop.png);
+    height: calc(100vh - var(--menuHeight));
+    top: 0;
+
+    position: relative;
+    left: var(--menuWidth);
+    width: calc(100% - var(--menuWidth));
+    height: 100vh;
+    max-height: 100vh;
   }
   @include responsive(desktop) {
-    grid-template-columns: 15% 60% 25%;
-    background-image: url(../../assets/images/bg-desktop.png);
+    width: calc(95% - var(--menuWidth));
   }
 }
 
 .main > *:not(:last-child) {
-  border-right: 1px solid var(--borderlines);
+  @include responsive(laptop) {
+    border-right: 1px solid var(--borderlines);
+    box-shadow: 0 0 100px -5px var(--glow);
+  }
 }
 
 .main > *:last-child {

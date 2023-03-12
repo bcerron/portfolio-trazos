@@ -1,23 +1,18 @@
 @use '../mixins/responsive.scss' as *;
 
-//DIV home - Estilos
+//DIV profile - Estilos
 
-.home {
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  @include responsive(laptop) {
-    width: inherit;
-  }
+.profile {
+  margin-bottom: 20px;
 }
 
-.home__img {
+.profile__img {
   width: 100%;
-
+  max-width: 350px;
   height: auto;
 }
 
-.home__rrss {
+.profile__rrss {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -35,7 +30,7 @@
   }
 }
 
-.home--image {
+.profile--image {
   border-radius: 100%;
   height: auto;
   width: 85%;
@@ -46,7 +41,7 @@
   }
 }
 
-.home__info {
+.profile__info {
   width: auto;
   height: auto;
   grid-column: 2/3;
@@ -68,7 +63,7 @@
     margin-top: 40px;
   }
 }
-.home__description {
+.profile__description {
   line-height: 1.5;
   text-align: justify;
   flex-direction: column;

@@ -9,52 +9,242 @@
     <title>Pedro Benito | Portfolio Trazos</title>
   </head>
   <body>
+    <header class="header">
+      <nav>
+        <ul class="menu" id="menu">
+          <li class="menu__element element--home active-element" data-menu="home"><img src="./assets/icons/home.svg" alt="" class="element--img" /><span class="element--span">Home</span></li>
+          <li class="menu__element element--works" data-menu="works"><img src="./assets/icons/works.svg" alt="" class="element--img" /><span class="element--span">Works</span></li>
+          <li class="menu__element element--about" data-menu="profile"><img src="./assets/icons/profile.svg" alt="" class="element--img" /><span class="element--span">About</span></li>
+          <li class="menu__element element--contact" data-menu="contact" id="contact-button"><img src="./assets/icons/contact.svg" alt="" class="element--img" /><span class="element--span">Contact</span></li>
+        </ul>
+      </nav>
+    </header>
     <main class="main">
-      <header class="header">
-        <nav>
-          <ul class="menu" id="menu">
-            <li class="menu__element element--home active-element" data-menu="home"><img src="./assets/icons/home.svg" alt="" class="element--img" /><span class="element--span">Home</span></li>
-            <li class="menu__element element--works" data-menu="works"><img src="./assets/icons/works.svg" alt="" class="element--img" /><span class="element--span">Works</span></li>
-            <li class="menu__element element--about" data-menu="profile"><img src="./assets/icons/profile.svg" alt="" class="element--img" /><span class="element--span">About</span></li>
-            <li class="menu__element element--contact" data-menu="contact"><img src="./assets/icons/contact.svg" alt="" class="element--img" /><span class="element--span">Contact</span></li>
-          </ul>
-        </nav>
-      </header>
       <section class="main-content">
-        <article class="content home bg-main-color" id="home">
-          <div class="flex home__header">
-            <div class="flex home__img">
-              <picture>
-                <source media="(max-width: 1024px)" srcset="./assets/images/mobile/profile.jpg" />
-                <source media="(min-width: 1024px)" srcset="./assets/images/mobile/profile.jpg" />
-                <img src="./assets/images/mobile/profile.jpg" alt="" class="profile-image" />
-              </picture>
-            </div>
-            <div class="flex home__info">
-              <p class="title">Hola, soy Pedro</p>
-              <p class="subtitle">Diseñador gráfico, Frontend Developer & Motion Graphics</p>
-            </div>
-            <div class="home__rrss"></div>
-            <a href="https://www.linkedin.com/in/bcerron/" aria-label="LinkedIN" target="_blank"><img src="./assets/rrss/linkedin.svg" alt="LinkedIN" class="rrss" /></a>
-            <a href="https://vimeo.com/pedrobenito" aria-label="Vimeo" target="_blank"><img src="./assets/rrss/vimeo.svg" alt="Vimeo" class="rrss" /></a>
-            <a href="https://www.instagram.com/pedrobcerron/" aria-label="Instagram" target="_blank"><img src="./assets/rrss/instagram.svg" alt="Instagram" class="rrss" /></a>
-            <a href="https://www.behance.net/bcerron" aria-label="Behance" target="_blank"><img src="./assets/rrss/behance.svg" alt="Behance" class="rrss" /></a>
+        <article class="article flex column home" id="home">
+          <div class="flex column home__header">
+            <img src="./assets/logo.svg" alt="" class="home__img">
           </div>
-          <div class="flex home__description">
-            <p class="text">Me considero una persona creativa, trabajadora, insistente y muy metódica en todo lo que hago. Me encanta darle vueltas a un diseño, y hacer pruebas hasta dar con la tecla adecuada. Conseguir que el briefing obtenga la respuesta que se espera.</p>
-            <p class="text">Soy un diseñador creativo, metódico y muy perfeccionista. Tengo la suerte de ser capaz de dominar cualquier software en muy poco tiempo de uso, y de forma autodidacta. Me encanta aprender por mi cuenta.</p>
-            <p class="text">Hasta 2021, mi perfil profesional estuvo orientado a la ejecución y diseño de eventos. Trabajé durante 3 años en Dubai en el sector de alquiler de material audiovisual en el departamento gráfico y creativo.</p>
-            <p class="text">A partir del 2021, salí del mundo de los eventos corporativos, para centrarme en el diseño web y en el desarrollo Frontend, habiendo cursado un Master en programación Frontend en la escuela Trazos, y trabajando como desarrollador en una compañía financiera</p>
+
+        </article>
+        <!-- SECCION TRABAJOS -->
+        <article class="article bg-main-color work hide" id="works">
+          <div class="flex column work__header"><p class="title">Trabajos</p></div>
+          <div class="flex row work__jobs">
+            <a href="https://vimeo.com/manage/videos/790767312" target="_blank">
+              <div class="flex column work__element">
+                <img src="assets/images/jobs/Asset 1.jpg" class="job__image" alt="">
+                <p class="job__description">AV Experiences</p>
+              </div>
+            </a>
+            <a href="https://vimeo.com/manage/videos/790767312" target="_blank">
+              <div class="flex column work__element">
+                <img src="assets/images/jobs/Asset 2.jpg" class="job__image" alt="">
+                <p class="job__description">Motion Raining</p>
+              </div>
+            </a>
+            <a href="https://vimeo.com/24479326" target="_blank">
+              <div class="flex column work__element">
+                <img src="assets/images/jobs/Asset 3.jpg" class="job__image" alt="">
+                <p class="job__description">Tres Variables</p>
+              </div>
+            </a>
+            <a href="https://bcerron.github.io/four-card-feature-section/" target="_blank">
+              <div class="flex column work__element">
+                <img src="assets/images/jobs/Asset 4.jpg" class="job__image" alt="">
+                <p class="job__description">Grid</p>
+              </div>
+            </a>
+            <a href="https://bcerron.github.io/single-price-grid-component/" target="_blank">
+              <div class="flex column work__element">
+                <img src="assets/images/jobs/Asset 5.jpg" class="job__image" alt="">
+                <p class="job__description">Product Price</p>
+              </div>
+            </a>
+            <a href="https://vimeo.com/24486680" target="_blank">
+              <div class="flex column work__element">
+                <img src="assets/images/jobs/Asset 6.jpg" class="job__image" alt="">
+                <p class="job__description">Educa Thyssen</p>
+              </div>
+            </a>
+            <a href="https://bcerron.github.io/Testimonials-Grid-Section/" target="_blank">
+              <div class="flex column work__element">
+                <img src="assets/images/jobs/Asset 7.jpg" class="job__image" alt="">
+                <p class="job__description">Info Report</p>
+              </div>
+            </a>
+            <a href="https://bcerron.github.io/sunnyside/" target="_blank">
+              <div class="flex column work__element">
+                <img src="assets/images/jobs/Asset 8.jpg" class="job__image" alt="">
+                <p class="job__description">Sunnyside</p>
+              </div>
+            </a>
+            <a href="https://bcerron.github.io/insure-landing-page-master/" target="_blank">
+              <div class="flex column work__element">
+                <img src="assets/images/jobs/Asset 9.jpg" class="job__image" alt="">
+                <p class="job__description">Insure</p>
+              </div>
+            </a>
           </div>
         </article>
-        <article class="content work bg-main-color hide" id="works">
-          TRABAJOS
-          <div class="content-work__jobs"></div>
-          <div class="content-work__jobs"></div>
-          <div class="content-work__jobs"></div>
+
+        <!-- SECCION PERFIL  -->
+        <article class="flex column profile article hide" id="profile">
+          <div class="flex column bg-main-color profile container">
+            <div class="flex row">
+              <div class="flex profile__img">
+                <picture>
+                  <source media="(max-width: 1024px)" srcset="./assets/images/mobile/profile.jpg" />
+                  <source media="(min-width: 1024px)" srcset="./assets/images/mobile/profile.jpg" />
+                  <img src="./assets/images/mobile/profile.jpg" alt="" class="profile--image" />
+                </picture>
+              </div>
+              <div class="flex column">
+                <div class="flex profile__info">
+                  <p class="title">Hola, soy Pedro</p>
+                  <p class="subtitle">Diseñador gráfico, Frontend Developer & Motion Grapher</p>
+                </div>
+                <div class="flex profile__rrss">
+                  <a href="https://www.linkedin.com/in/bcerron/" aria-label="LinkedIN" target="_blank"><img src="./assets/rrss/linkedin.svg" alt="LinkedIN" class="rrss" /></a>
+                  <a href="https://vimeo.com/pedrobenito" aria-label="Vimeo" target="_blank"><img src="./assets/rrss/vimeo.svg" alt="Vimeo" class="rrss" /></a>
+                  <a href="https://www.instagram.com/pedrobcerron/" aria-label="Instagram" target="_blank"><img src="./assets/rrss/instagram.svg" alt="Instagram" class="rrss" /></a>
+                  <a href="https://www.behance.net/bcerron" aria-label="Behance" target="_blank"><img src="./assets/rrss/behance.svg" alt="Behance" class="rrss" /></a>
+                </div>
+              </div>
+            </div>
+            <div class="flex profile__description">
+              <p class="text">Me considero una persona creativa, trabajadora, insistente y muy metódica en todo lo que hago. Me encanta darle vueltas a un diseño, y hacer pruebas hasta dar con la tecla adecuada. Conseguir que el briefing obtenga la respuesta que se espera.</p>
+              <p class="text">Soy un diseñador creativo, metódico y muy perfeccionista. Tengo la suerte de ser capaz de dominar cualquier software en muy poco tiempo de uso, y de forma autodidacta. Me encanta aprender por mi cuenta.</p>
+              <p class="text">Hasta 2021, mi perfil profesional estuvo orientado a la ejecución y diseño de eventos. Trabajé durante 3 años en Dubai en el sector de alquiler de material audiovisual en el departamento gráfico y creativo.</p>
+              <p class="text">A partir del 2021, salí del mundo de los eventos corporativos, para centrarme en el diseño web y en el desarrollo Frontend, habiendo cursado un Master en programación Frontend en la escuela Trazos, y trabajando como desarrollador en una compañía financiera</p>
+            </div>
+          </div>
+          <div class="flex column profile container">
+            <p class="subtitle">Experiencia Laboral</p>
+            <div class="flex experience">
+              <div class="flex column experience__element">
+                <p class="company">Monty Global Payments (Madrid)</p>
+                <p class="position">Frontend Developer</p>
+                <p class="duration">Jun 2021 - Actualidad</p>
+              </div>
+              <div class="flex column experience__element">
+                <p class="company">AV Medios SL (Madrid)</p>
+                <p class="position">Diseñador Gráfico / Técnico de vídeo</p>
+                <p class="duration">Ene 2017 - Jun 2021</p>
+              </div>
+              <div class="flex column experience__element">
+                <p class="company">Visionarea (Madrid)</p>
+                <p class="position">Diseñador Gráfico / Project Manager</p>
+                <p class="duration">Sept 2016 - Ene 2017</p>
+              </div>
+              <div class="flex column experience__element">
+                <p class="company">Almoe AV Productions (Dubai)</p>
+                <p class="position">Diseñador Gráfico / Técnico de vídeo</p>
+                <p class="duration">Oct 2013 - Ago 2016</p>
+              </div>
+              <div class="flex column experience__element">
+                <p class="company">TechnoPro LLC (Dubai)</p>
+                <p class="position">Diseñador Gráfico / Técnico de vídeo</p>
+                <p class="duration">Abr 2013 - Oct 2013</p>
+              </div>
+              <div class="flex column experience__element">
+                <p class="company">FreeYourMind (Madrid)</p>
+                <p class="position">Motion Grapher</p>
+                <p class="duration">Oct 2011 - Dic 2011</p>
+              </div>
+              <div class="flex column experience__element">
+                <p class="company">Turner Broadcasting System (Madrid)</p>
+                <p class="position">Motion Grapher</p>
+                <p class="duration">Sept 2010 - Oct 2011</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex column profile container">
+            <p class="subtitle">Idiomas</p>
+            <div class="flex experience">
+              <div class="flex column experience__element">
+                <p class="company">Español</p>
+                <p class="position">Idioma nativo</p>
+              </div>
+              <div class="flex column experience__element">
+                <p class="company">Inglés</p>
+                <p class="position">Nivel Advanced</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex column profile container">
+            <p class="subtitle">Conocimientos</p>
+            <div class="flex experience">
+              <div class="flex column experience__element">
+                <p class="company">Diseño Gráfico</p>
+                <p class="position">Photoshop, Illustrator, InDesign</p>
+                <p class="duration">13 años de experiencia</p>
+              </div>
+              <div class="flex column experience__element">
+                <p class="company">Desarrollo Web</p>
+                <p class="position">HTML, CSS, JS, Angular, WordPress</p>
+                <p class="duration">5 años de experiencia</p>
+              </div>
+              <div class="flex column experience__element">
+                <p class="company">Motion Graphics</p>
+                <p class="position">After Effects, Adobe Premiere</p>
+                <p class="duration">13 años de experiencia</p>
+              </div>
+              <div class="flex column experience__element">
+                <p class="company">CAD / 3D</p>
+                <p class="position">3D Max Studio, Cinema 4D, Vectorworks</p>
+                <p class="duration">7 años de experiencia</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex column profile container">
+            <p class="subtitle">Formación</p>
+            <div class="flex experience">
+              <div class="flex column experience__element">
+                <p class="company">Master Desarrollo Frontend</p>
+                <p class="position">Escuela Trazos (Madrid)</p>
+                <p class="duration">Ene 2023 - Jun 2023</p>
+              </div>
+              <div class="flex column experience__element">
+                <p class="company">Grado en Diseño Digital</p>
+                <p class="position">Istituto Europeo di Design (IED - Madrid)</p>
+                <p class="duration">Sept 2007 - Jun 2010</p>
+              </div>
+            </div>
+          </div>
         </article>
+
+        <!-- Seccion Contacto -->
+        <article class="flex column contact article hide" id="contact">
+          <div class="contact__container flex column">
+            <form action="enviar.php" method="post" class="form flex column">
+              <label for="nombre" class="form__label">Nombre:</label>
+              <input type="text" id="nombre" class="input__form" name="nombre" required /><br /><br />
+              <label for="email" class="form__label">Correo electrónico:</label>
+              <input type="email" id="email" class="input__form" name="email" required /><br /><br />
+              <label for="mensaje" class="form__label">Mensaje:</label>
+              <textarea id="mensaje" name="mensaje" class="textarea__form" rows="10" required></textarea><br /><br />
+              <input type="submit" value="Enviar" class="form__button" />
+            </form>
+          </div>
+        </article> 
       </section>
     </main>
+    
+      <footer class="footer" id="footer">
+      <div class="footer__container flex column">
+        <form action="enviar.php" method="post" class="form flex column">
+          <label for="nombre" class="form__label">Nombre:</label>
+          <input type="text" id="nombre" class="input__form" name="nombre" required /><br /><br />
+          <label for="email" class="form__label">Correo electrónico:</label>
+          <input type="email" id="email" class="input__form" name="email" required /><br /><br />
+          <label for="mensaje" class="form__label">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" class="textarea__form" rows="10" required></textarea><br /><br />
+          <input type="submit" value="Enviar" class="form__button" />
+        </form>
+      </div>
+      </footer>
+    </article>
 
     <script type="module" src="./js/index.js"></script>
   </body>

@@ -9,21 +9,25 @@
 }
 
 .hide {
-  height: 0;
-  transform: rotateY('-90deg');
   opacity: 0;
   top: 0;
-  left: 40%;
-  transition: opacity 0.5s, transform 0.5s;
+  left: 0;
+  pointer-events: none;
+  transition: opacity var(--defaultTime);
 }
-
-.block {
-  transition: opacity 0.5s, transform 0.5s;
-  position: absolute;
-  padding: 1.25rem;
-  width: auto;
+.hide-footer {
+  display: none;
 }
 
 .flex {
   display: flex;
 }
+
+.column {
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
+}
+
